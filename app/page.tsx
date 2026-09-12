@@ -38,12 +38,14 @@ text:"Exploring intelligent signal analysis and data-driven approaches for compl
 
 return (
 
+
 <main
+
 className="
-h-screen
-overflow-hidden
+min-h-screen
 text-slate-900
 "
+
 >
 
 
@@ -53,29 +55,45 @@ text-slate-900
 
 
 
-{/* MAIN AREA */}
+
 
 <div
+
 className="
-pt-24
-h-full
-flex
+pt-28
 px-6
-gap-8
+max-w-7xl
+mx-auto
 "
+
 >
 
 
 
-{/* LEFT FIXED PROFILE */}
-
-<aside
+<div
 
 className="
-w-[320px]
-shrink-0
-h-[calc(100vh-120px)]
-overflow-hidden
+grid
+grid-cols-1
+lg:grid-cols-3
+gap-10
+items-start
+"
+
+>
+
+
+
+
+
+{/* LEFT PROFILE */}
+
+
+
+<div
+
+className="
+lg:col-span-1
 "
 
 >
@@ -84,7 +102,7 @@ overflow-hidden
 <ProfileCard />
 
 
-</aside>
+</div>
 
 
 
@@ -92,20 +110,20 @@ overflow-hidden
 
 
 
-{/* RIGHT SCROLL AREA */}
+
+
+{/* RIGHT CONTENT */}
+
 
 
 <section
 
 className="
-flex-1
-h-[calc(100vh-120px)]
-overflow-y-auto
-pr-4
-pb-20
+lg:col-span-2
 "
 
 >
+
 
 
 
@@ -129,7 +147,6 @@ y:0
 transition={{
 duration:0.8
 }}
-
 
 
 className="
@@ -165,6 +182,7 @@ Research Philosophy
 
 
 
+
 <p
 
 className="
@@ -194,6 +212,7 @@ and Explainable AI.
 
 
 
+
 <p
 
 className="
@@ -211,6 +230,7 @@ address real-world challenges in healthcare
 and intelligent systems.
 
 </p>
+
 
 
 
@@ -242,7 +262,7 @@ practical applications with meaningful impact.
 
 
 
-{/* METRICS */}
+{/* RESEARCH METRICS */}
 
 
 
@@ -259,14 +279,18 @@ gap-5
 >
 
 
-
 {
 
+
 [
-["6+","Research Publications","cyan"],
-["IEEE","International Conferences","blue"],
-["Springer","Book Chapter Publication","purple"],
-["5+","Research Areas","yellow"]
+
+["6+","Research Publications"],
+
+["IEEE","International Conferences"],
+
+["Springer","Book Chapter Publication"],
+
+["5+","Research Areas"]
 
 ].map((item)=>(
 
@@ -344,7 +368,7 @@ text-slate-600
 
 
 
-{/* HIGHLIGHTS */}
+{/* RESEARCH HIGHLIGHTS */}
 
 
 
@@ -366,6 +390,7 @@ gap-6
 highlights.map((item,index)=>(
 
 
+
 <motion.div
 
 
@@ -374,27 +399,37 @@ key={item.title}
 
 
 initial={{
+
 opacity:0,
+
 y:20
+
 }}
 
 
 
 whileInView={{
+
 opacity:1,
+
 y:0
+
 }}
 
 
 
 viewport={{
+
 once:true
+
 }}
 
 
 
 transition={{
+
 delay:index*0.15
+
 }}
 
 
@@ -415,6 +450,7 @@ duration-300
 >
 
 
+
 <h2
 
 className="
@@ -428,6 +464,8 @@ text-cyan-600
 {item.title}
 
 </h2>
+
+
 
 
 
@@ -448,7 +486,11 @@ leading-relaxed
 
 
 
+
+
+
 </motion.div>
+
 
 
 ))
@@ -475,6 +517,15 @@ leading-relaxed
 
 
 </div>
+
+
+
+
+
+
+
+</div>
+
 
 
 
