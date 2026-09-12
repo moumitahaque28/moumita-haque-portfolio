@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+
 import {
   FaGithub,
   FaLinkedin,
@@ -10,38 +11,60 @@ import {
 
 export default function ProfileCard(){
 
+
 return (
 
-<div className="
+
+<div
+
+className="
 w-full
-max-w-sm
+h-full
 rounded-3xl
 bg-white/70
 backdrop-blur-xl
 shadow-2xl
-p-8
+p-6
 text-center
 border
 border-white/50
-">
+flex
+flex-col
+items-center
+justify-start
+"
 
 
-{/* Profile Image */}
+>
 
-<div className="
+
+
+
+
+{/* PROFILE IMAGE */}
+
+
+<div
+
+className="
 flex
 justify-center
-">
+"
+
+>
+
 
 <Image
 
 src="/Profile.jpg"
 
-width={170}
+width={160}
 
-height={170}
+height={160}
 
 alt="Moumita Haque Mohona"
+
+priority
 
 className="
 rounded-full
@@ -51,18 +74,34 @@ shadow-lg
 object-cover
 "
 
-/>
+ />
+
 
 </div>
 
 
 
-<h1 className="
-mt-6
-text-2xl
+
+
+
+
+
+
+{/* NAME */}
+
+
+
+<h1
+
+className="
+mt-5
+text-xl
+md:text-2xl
 font-bold
 text-slate-900
-">
+"
+
+>
 
 Moumita Haque Mohona
 
@@ -70,11 +109,25 @@ Moumita Haque Mohona
 
 
 
-<p className="
+
+
+
+
+{/* TITLE */}
+
+
+
+<p
+
+className="
 mt-2
 text-cyan-600
 font-semibold
-">
+text-sm
+md:text-base
+"
+
+>
 
 AI Researcher | Deep Learning
 
@@ -83,14 +136,29 @@ AI Researcher | Deep Learning
 
 
 
-<p className="
+
+
+
+
+
+{/* EDUCATION */}
+
+
+
+<p
+
+className="
 mt-4
 text-sm
 leading-relaxed
 text-slate-600
-">
+"
+
+>
 
 B.Sc. (Engineering)
+
+<br/>
 
 Information and Communication Engineering
 
@@ -103,67 +171,116 @@ Pabna University of Science and Technology
 
 
 
-<div className="
+
+
+
+
+
+{/* ACHIEVEMENTS */}
+
+
+
+<div
+
+className="
 mt-6
 space-y-3
 text-sm
 text-slate-700
-">
+"
+
+>
 
 
 <div>
+
 🏆 <b>Class Rank:</b> 1st Position
+
 </div>
 
 
 <div>
+
 🎓 <b>CGPA:</b> 3.90 / 4.00
+
 </div>
+
 
 
 <div>
+
 📚 <b>Publications:</b> IEEE & Springer
-</div>
-
 
 </div>
 
 
 
+</div>
 
 
-<div className="
+
+
+
+
+
+
+
+{/* SOCIAL LINKS */}
+
+
+
+<div
+
+className="
 flex
 justify-center
 gap-6
 mt-7
 text-2xl
 text-slate-700
-">
+"
+
+>
 
 
-<FaGithub className="
+<a
+
+href="https://github.com/"
+
+target="_blank"
+
+className="
 hover:text-cyan-500
-cursor-pointer
 transition
-"/>
+"
+
+>
+
+<FaGithub />
+
+</a>
 
 
-<FaLinkedin className="
+
+
+
+<a
+
+href="https://linkedin.com/"
+
+target="_blank"
+
+className="
 hover:text-cyan-500
-cursor-pointer
 transition
-"/>
+"
 
+>
 
-<FaFilePdf className="
-hover:text-cyan-500
-cursor-pointer
-transition
-"/>
+<FaLinkedin />
 
+</a>
 
-</div>
 
 
 
@@ -172,23 +289,16 @@ transition
 
 href="/CV.pdf"
 
-download
+target="_blank"
 
 className="
-px-5
-py-3
-rounded-full
-border
-border-cyan-400
-hover:bg-cyan-400
-hover:text-black
+hover:text-cyan-500
 transition
-inline-block
 "
 
 >
 
-Download CV
+<FaFilePdf />
 
 </a>
 
@@ -196,6 +306,58 @@ Download CV
 
 </div>
 
+
+
+
+
+
+
+
+
+{/* DOWNLOAD CV BUTTON */}
+
+
+
+<a
+
+
+href="/CV.pdf"
+
+download
+
+
+className="
+mt-6
+px-6
+py-3
+rounded-full
+border
+border-cyan-400
+text-slate-800
+font-semibold
+hover:bg-cyan-400
+hover:text-black
+transition
+duration-300
+"
+
+
+>
+
+
+Download CV
+
+
+</a>
+
+
+
+
+
+</div>
+
+
 );
+
 
 }
