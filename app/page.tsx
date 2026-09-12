@@ -288,7 +288,7 @@ gap-5
 
 ["IEEE","International Conferences"],
 
-["Springer","Book Chapter Publication"],
+["Sprin.","Book Chapter Publication"],
 
 ["5+","Research Areas"]
 
